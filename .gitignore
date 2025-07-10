@@ -1,0 +1,57 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+.venv
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Logs
+logs/
+*.log
+
+# Data
+data/
+processed_urls_free.txt
+*.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.backup
+*.old
+
+# Test files
+test_*.json
+*_test_*.json
+
+# Sensitive configuration
+config/monitoring_config.json.backup
+
+# Cache
+.cache/
+*.cache
+
+# Export files
+config_export_*.json
+tui_export_*.json

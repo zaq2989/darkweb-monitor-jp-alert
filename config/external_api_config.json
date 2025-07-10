@@ -1,0 +1,20 @@
+{
+  "external_apis": {
+    "nitter_instances": [
+      "https://nitter.net",
+      "https://nitter.privacydev.net"
+    ],
+    "security_sites": {
+      "Security NEXT": "https://www.security-next.com",
+      "ITmedia": "https://www.itmedia.co.jp/enterprise/subtop/security/",
+      "IPA": "https://www.ipa.go.jp/security/"
+    },
+    "tor_directories": [
+      "https://dark.fail",
+      "https://darkfailenbsdla5mal2mxn2uz66od5vtzd5qozslagrfzachha3f3id.onion.ws",
+      "https://darkfailenbsdla5mal2mxn2uz66od5vtzd5qozslagrfzachha3f3id.onion.ly",
+      "https://ahmia.fi",
+      "https://thehiddenwiki.org"
+    ]
+  }
+}

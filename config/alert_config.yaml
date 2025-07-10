@@ -1,0 +1,116 @@
+# Alert Configuration
+# アラート設定とフィルタリングルール
+
+# Severity mapping based on content
+severity_rules:
+  HIGH:
+    keywords:
+      - password
+      - credential
+      - database dump
+      - breach
+      - leak
+      - hack
+      - 漏洩
+      - 流出
+      - ハッキング
+    priority_boost: true  # HIGH priority targets always trigger HIGH alerts
+    
+  MEDIUM:
+    keywords:
+      - vulnerability
+      - exploit
+      - security
+      - exposed
+      - 脆弱性
+      - セキュリティ
+    
+  LOW:
+    keywords:
+      - mention
+      - discussion
+      - forum
+      - 言及
+      - 議論
+
+# Alert thresholds by priority
+alert_thresholds:
+  HIGH_PRIORITY:
+    confidence_score: 80  # Lower threshold for high priority targets
+    severity_levels: [HIGH, MEDIUM, LOW, INFO]  # Alert on all severities
+    
+  MEDIUM_PRIORITY:
+    confidence_score: 85
+    severity_levels: [HIGH, MEDIUM]
+    
+  LOW_PRIORITY:
+    confidence_score: 90
+    severity_levels: [HIGH]
+    
+  DEFAULT:
+    confidence_score: 85
+    severity_levels: [HIGH, MEDIUM]
+
+# Category-specific rules
+category_rules:
+  金融:  # Financial institutions
+    alert_all: true  # Alert on any mention
+    extra_keywords:
+      - 口座
+      - アカウント
+      - 振込
+      - クレジット
+      - account
+      - transfer
+      - credit
+    
+  通信:  # Telecom
+    focus_keywords:
+      - 個人情報
+      - 契約者
+      - SIM
+      - subscriber
+      - personal data
+    
+  製造:  # Manufacturing
+    focus_keywords:
+      - 設計図
+      - 技術情報
+      - blueprint
+      - technical data
+
+# Notification settings
+notifications:
+  slack:
+    enabled: true
+    high_priority_channel: null  # Optional: different channel for high priority
+    rate_limit: 100  # Max alerts per hour
+    
+  email:
+    enabled: false
+    recipients: []
+    
+# Working hours (JST)
+working_hours:
+  enabled: true  # Set to true to only alert during work hours
+  start: "09:00"
+  end: "18:00"
+  timezone: "Asia/Tokyo"
+  weekend_alerts: false  # 週末はアラートを送信しない
+
+# Duplicate suppression
+duplicate_suppression:
+  enabled: true
+  window_hours: 24  # Don't alert on same URL within 24 hours
+  similarity_threshold: 95  # Text similarity percentage
+
+# Source reliability scores (affects severity)
+source_reliability:
+  DarkOwl: 0.9
+  SpyCloud: 0.95
+  Ahmia: 0.7
+  Reddit: 0.6
+  Telegram: 0.7
+  LocalFile: 1.0
+  GitHub: 0.8
+  Pastebin: 0.6

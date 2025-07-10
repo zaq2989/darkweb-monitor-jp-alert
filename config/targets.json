@@ -1,0 +1,52 @@
+{
+  "keywords": [
+    "sony.co.jp",
+    "トヨタ自動車",
+    "panasonic.com",
+    "任天堂",
+    "softbank.jp",
+    "mitsubishi.com",
+    "rakuten.co.jp",
+    "docomo.ne.jp",
+    "au.com",
+    "三菱UFJ銀行",
+    "三井住友"
+  ],
+  "domains": [
+    "sony.co.jp",
+    "toyota.co.jp",
+    "panasonic.com",
+    "nintendo.co.jp",
+    "softbank.jp",
+    "mitsubishi.com",
+    "rakuten.co.jp"
+  ],
+  "company_names": [
+    "ソニー",
+    "トヨタ自動車",
+    "パナソニック",
+    "任天堂",
+    "ソフトバンク",
+    "三菱",
+    "楽天",
+    "NTTドコモ",
+    "KDDI",
+    "みずほ銀行",
+    "三井住友銀行"
+  ],
+  "priority_targets": {
+    "sony.co.jp": "HIGH",
+    "rakuten.co.jp": "HIGH",
+    "三菱UFJ銀行": "HIGH",
+    "みずほ銀行": "HIGH",
+    "三井住友銀行": "HIGH"
+  },
+  "categories": {
+    "三菱UFJ銀行": "金融",
+    "docomo.ne.jp": "通信",
+    "au.com": "通信",
+    "softbank.jp": "通信",
+    "みずほ銀行": "金融",
+    "三井住友銀行": "金融"
+  }
+}

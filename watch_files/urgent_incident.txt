@@ -1,0 +1,18 @@
+
+URGENT: Security Incident Report
+
+Multiple Japanese companies affected:
+
+1. Panasonic (panasonic.com)
+   - Database credentials exposed
+   - Customer data at risk
+   
+2. Nintendo 
+   - 任天堂のゲームサーバーへの不正アクセス
+   - Player account information leaked
+   
+3. SoftBank (softbank.jp)
+   - Internal documents found on darkweb
+   - Employee passwords compromised
+
+Immediate action required.

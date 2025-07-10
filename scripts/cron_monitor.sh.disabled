@@ -1,0 +1,5 @@
+#!/bin/bash
+# Darkweb Monitor Cron Script
+cd "/home/zaq/デスクトップ/exp/darkweb/darkweb-monitor-jp-alert"
+source "/home/zaq/デスクトップ/exp/darkweb/darkweb-monitor-jp-alert/venv/bin/activate"
+python "/home/zaq/デスクトップ/exp/darkweb/darkweb-monitor-jp-alert/scripts/start_monitoring_free.py" --once >> "/home/zaq/デスクトップ/exp/darkweb/darkweb-monitor-jp-alert/logs/monitor_cron.log" 2>&1

@@ -1,0 +1,32 @@
+# Core dependencies
+requests>=2.31.0
+python-dotenv>=1.0.0
+schedule>=1.2.0
+
+# Text analysis
+fuzzywuzzy>=0.18.0
+python-Levenshtein>=0.21.0  # Optional speedup for fuzzywuzzy
+
+# Data storage
+elasticsearch>=7.17.0,<8.0.0
+
+# Logging and monitoring
+colorlog>=6.7.0
+
+# HTML parsing for Ahmia
+beautifulsoup4>=4.12.0  # Optional: for better HTML parsing
+
+# Optional: Tor integration
+# PySocks>=1.7.1  # For SOCKS proxy support
+# stem>=1.8.0  # For Tor control
+
+# Optional: Additional notification channels
+# slack-sdk>=3.23.0  # For advanced Slack features
+# discord.py>=2.3.0  # For Discord notifications
+# twilio>=8.5.0  # For SMS alerts
+
+# Development dependencies (optional)
+# pytest>=7.4.0
+# black>=23.7.0
+# flake8>=6.1.0
+# mypy>=1.5.0

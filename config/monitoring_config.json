@@ -1,0 +1,85 @@
+{
+  "monitoring": {
+    "interval_minutes": 15,
+    "mode": "production",
+    "max_alerts_per_cycle": 5,
+    "deduplication": true,
+    "log_level": "INFO",
+    "retention_days": 30
+  },
+  "sources": {
+    "web_scraping": true,
+    "twitter": true,
+    "tor_directories": true,
+    "security_news": true,
+    "simulation_fallback": true,
+    "ahmia": true,
+    "pastebin": true,
+    "github_gists": true,
+    "reddit": true,
+    "telegram": true
+  },
+  "slack": {
+    "enabled": true,
+    "webhook_url": "https://hooks.slack.com/services/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",
+    "severity_filter": [
+      "HIGH",
+      "MEDIUM",
+      "LOW"
+    ],
+    "test_mode": false
+  },
+  "proxy": {
+    "enabled": true,
+    "type": "socks5",
+    "host": "127.0.0.1",
+    "port": 9050,
+    "username": "",
+    "password": ""
+  },
+  "api_keys": {
+    "darkowl": "",
+    "spycloud": "",
+    "intelligencex": "",
+    "shodan": "",
+    "hibp": ""
+  },
+  "external_apis": {
+    "nitter_instances": [
+      "https://nitter.net",
+      "https://nitter.privacydev.net"
+    ],
+    "security_sites": {
+      "Security NEXT": "https://www.security-next.com",
+      "ITmedia": "https://www.itmedia.co.jp/enterprise/subtop/security/",
+      "IPA": "https://www.ipa.go.jp/security/"
+    },
+    "tor_directories": [
+      "https://dark.fail",
+      "https://darkfailenbsdla5mal2mxn2uz66od5vtzd5qozslagrfzachha3f3id.onion.ws"
+    ]
+  },
+  "filters": {
+    "confidence_threshold": 75,
+    "severity_levels": [
+      "HIGH",
+      "MEDIUM",
+      "LOW",
+      "INFO"
+    ],
+    "exclude_sources": [],
+    "priority_only": false
+  },
+  "storage": {
+    "elasticsearch": {
+      "enabled": false,
+      "host": "localhost",
+      "port": 9200,
+      "index": "darkweb-alerts"
+    },
+    "local_db": {
+      "enabled": true,
+      "path": "data/alerts.db"
+    }
+  }
+}

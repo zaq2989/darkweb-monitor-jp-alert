@@ -1,0 +1,12 @@
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.git/
+.gitignore
+logs/*
+processed_*.txt
+processed_*.json
+*_cache.json
+test_*.py

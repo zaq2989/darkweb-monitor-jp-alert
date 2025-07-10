@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  darkweb-monitor:
+    build: .
+    container_name: darkweb-monitor-jp
+    restart: unless-stopped
+    environment:
+      - SLACK_WEBHOOK_URL=${SLACK_WEBHOOK_URL}
+      - TZ=Asia/Tokyo
+    volumes:
+      - ./logs:/app/logs
+      - ./watch_files:/app/watch_files
+      - ./.env:/app/.env:ro
+    networks:
+      - monitor-network
+
+  tor-proxy:
+    image: dperson/torproxy:latest
+    container_name: tor-proxy
+    restart: unless-stopped
+    networks:
+      - monitor-network
+    ports:
+      - "9050:9050"
+      - "9051:9051"
+
+networks:
+  monitor-network:
+    driver: bridge
